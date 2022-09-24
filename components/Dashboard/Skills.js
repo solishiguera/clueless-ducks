@@ -65,7 +65,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
             {userSkills.length > 0 ? userSkills.slice(0,5).map((dashboard_skill) => (
               <div key={dashboard_skill.dashboard_skill_id} className="flex flex-row w-full bg-gray-100 rounded-full shadow-md px-3 my-[0.2rem] md:my-[0.3rem] h-5 md:h-7 lg:h-8 justify-between items-center">
                 <h3 className='truncate text-xs md:text-sm font-bold w-4/12'>{dashboard_skill.skill.name}</h3>
-                <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-wizeline-red rounded-full h-2 overflow-hidden"/>
+                <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-clueless-blue rounded-full h-2 overflow-hidden"/>
               </div>
             )) : (
               <p className='font-light text-justify text-xs md:text-sm leading-none sm:leading-tight md:leading-tight lg:leading-tight'>Your skills section is empty! Click on pencil icon to edit.</p>
@@ -92,7 +92,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
                           {userSkills.map((dashboard_skill) => (
                             <div key={dashboard_skill.dashboard_skill_id} className="flex flex-row w-[22rem] bg-gray-100 rounded-full shadow-md px-3 my-[0.3rem] h-8 justify-between items-center">
                               <h3 className='truncate text-sm font-bold w-4/12'>{dashboard_skill.skill.name}</h3>
-                              <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-wizeline-red rounded-full h-2 overflow-hidden"/>
+                              <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-clueless-blue rounded-full h-2 overflow-hidden"/>
                             </div>
                           ))}
                         </div>
@@ -103,7 +103,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
                     {/*footer*/}
                     <div className="flex items-center justify-end p-4 lg:p-6 border-t-2 border-solid border-gray-200 rounded-b">
                       <button
-                        className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
+                        className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
                           onClick={() => setShowModalSkills(false)}
                       >
                         Close
@@ -150,7 +150,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
                         <option value='4'>4</option>
                         <option value='5'>5</option>
                       </select>
-                      <button disabled={!(selectedAddedLevel && selectedAddedSkill)} className="bg-wizeline-red text-white font-semibold px-3 py-[0.35rem] rounded-md disabled:opacity-30 hover:bg-red-600 my-auto" onClick={handleOnAdd}>
+                      <button disabled={!(selectedAddedLevel && selectedAddedSkill)} className="bg-clueless-blue text-white font-semibold px-3 py-[0.35rem] rounded-md disabled:opacity-30 hover:bg-blue-600 my-auto" onClick={handleOnAdd}>
                       +
                       </button>
                     </div>
@@ -163,12 +163,12 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
                           <option key={dashboard_skill.dashboard_skill_id} value={dashboard_skill.dashboard_skill_id}>{dashboard_skill.skill.name}: Level {dashboard_skill.level}</option>
                         ))}
                       </select>
-                      <VscTrash className='ml-2 text-wizeline-red text-2xl hover:text-red-900 hover:cursor-pointer' onClick={handleOnDelete}/>
+                      <VscTrash className='ml-2 text-clueless-blue text-2xl hover:text-red-900 hover:cursor-pointer' onClick={handleOnDelete}/>
                     </div>
                   </div>
                   {/*footer*/}
                   <div className="flex items-center justify-end p-4 lg:p-6 border-t-2 border-solid border-gray-200 rounded-b">
-                    <button className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base" onClick={handleOnClose}>
+                    <button className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base" onClick={handleOnClose}>
                       Close
                     </button>
                   </div>
@@ -200,7 +200,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
             {userSkills.length > 0 ? userSkills.slice(0,5).map((dashboard_skill) => (
               <div key={dashboard_skill.dashboard_skill_id}  className="flex flex-row w-full bg-gray-100 rounded-full shadow-md px-3 my-[0.2rem] md:my-[0.3rem] h-5 md:h-7 lg:h-8 justify-between items-center">
                 <h3 className='truncate text-xs md:text-sm font-bold w-4/12'>{dashboard_skill.skill.name}</h3>
-                <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-wizeline-red rounded-full h-2 overflow-hidden"/>
+                <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-clueless-blue rounded-full h-2 overflow-hidden"/>
               </div>
             )) : (
               <p className='font-light text-justify text-xs md:text-sm leading-none sm:leading-tight md:leading-tight lg:leading-tight'>User has not skills.</p>
@@ -227,7 +227,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
                           {userSkills.map((dashboard_skill) => (
                             <div key={dashboard_skill.dashboard_skill_id} className="flex flex-row w-[22rem] bg-gray-100 rounded-full shadow-md px-3 my-[0.3rem] h-8 justify-between items-center">
                               <h3 className='truncate text-sm font-bold w-4/12'>{dashboard_skill.skill.name}</h3>
-                              <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-wizeline-red rounded-full h-2 overflow-hidden"/>
+                              <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-clueless-blue rounded-full h-2 overflow-hidden"/>
                             </div>
                           ))}
                         </div>
@@ -238,7 +238,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
                     {/*footer*/}
                     <div className="flex items-center justify-end p-4 lg:p-6 border-t-2 border-solid border-gray-200 rounded-b">
                       <button
-                        className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
+                        className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
                           onClick={() => setShowModalSkills(false)}
                       >
                         Close

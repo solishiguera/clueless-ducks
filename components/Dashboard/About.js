@@ -219,7 +219,7 @@ function About({userId, viewingUserId, image, name, occupation, bio, onRefresh})
                                                     3
                                                 </button>
                                                 { showCancelTemplate ? (
-                                                    <button className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ml-1 lg:ml-2 ease-linear transition-all duration-150 px-3 py-1 disabled:opacity-30 rounded-md text-white text-xs lg:text-sm"
+                                                    <button className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ml-1 lg:ml-2 ease-linear transition-all duration-150 px-3 py-1 disabled:opacity-30 rounded-md text-white text-xs lg:text-sm"
                                                     onClick={setCurrentTemplate}>
                                                         Cancel
                                                     </button>
@@ -238,7 +238,7 @@ function About({userId, viewingUserId, image, name, occupation, bio, onRefresh})
                                             Save
                                         </button>
                                         <button
-                                            className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
+                                            className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
                                             onClick={handleOnClose}
                                         >
                                             Cancel

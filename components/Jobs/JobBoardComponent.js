@@ -60,7 +60,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
                <div className="mb-2 mt-1 flex flex-wrap">
                   {
                      job.jobOffer_skills ? job.jobOffer_skills.map((offer_skills) =>
-                        <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-red-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
+                        <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-blue-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
                   }
                </div>
                <div className="mb-2">
@@ -103,7 +103,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
                            Confirm
                            </button>                        
                            <button
-                           className="bg-wizeline-red text-white hover:bg-red-600 font-bold text-sm py-2 px-6 rounded-md"
+                           className="bg-clueless-blue text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md"
                            type="button"
                            onClick={() => setShowModal(false)}
                            >
@@ -129,7 +129,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
          <div className="mb-2 mt-1 flex flex-wrap">
             {
                job.jobOffer_skills ? job.jobOffer_skills.map((offer_skills) =>
-                  <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-red-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
+                  <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-blue-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
             }
          </div>
          <div className="mb-2">

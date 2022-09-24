@@ -48,7 +48,7 @@ function Portfolio({ query, renderData }) {
         <ModalPortfolio show={showModal} onClose={() => setShowModal(false)} onSave={() => refreshData()} data={data} user_id={session.user.id}/>
 
         <div className="bg-white rounded-xl w-full mb-5 text-center shadow-md">
-          <button className="bg-wizeline-red hover:bg-red-600 px-5 py-2 font-bold rounded-xl inline-flex items-center text-white w-full text-center" onClick={() => {setData(null), setShowModal(true)}}>
+          <button className="bg-clueless-blue hover:bg-blue-600 px-5 py-2 font-bold rounded-xl inline-flex items-center text-white w-full text-center" onClick={() => {setData(null), setShowModal(true)}}>
           <AiOutlinePlus className="mr-2"/>
           Add Experience
           </button>
@@ -75,12 +75,12 @@ function Portfolio({ query, renderData }) {
                 }}
                 >
                   <span className="-ml-14 text-gray-400 text-4xl "><VscTriangleRight/></span>
-                  <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-red-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
+                  <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-blue-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
                   <div className="flex grow flex-col">
                     <div className="flex flex-row justify-between items-center">
                       <h1 className="font-semibold text-xs sm:text-sm md:text-lg lg:text-xl">{experience.name}</h1>
                       <button 
-                      className="hover:text-red-900 rounded-xl inline-flex items-center text-wizeline-red"
+                      className="hover:text-red-900 rounded-xl inline-flex items-center text-clueless-blue"
                       onClick={(e) => {
                         e.stopPropagation();
                         deleteExperience(session.user.id, experience.experience_id).then(() => {refreshData()});
@@ -117,12 +117,12 @@ function Portfolio({ query, renderData }) {
                 }}
                 >
                   <span className="-ml-14 text-gray-400 text-4xl "><VscTriangleRight/></span>
-                  <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-red-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
+                  <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-blue-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
                   <div className="flex grow flex-col">
                     <div className="flex flex-row justify-between items-center">
                       <h1 className="font-semibold text-xs sm:text-sm md:text-lg lg:text-xl">{experience.name}</h1>
                       <button 
-                      className="hover:text-red-900 rounded-xl inline-flex items-center text-wizeline-red"
+                      className="hover:text-red-900 rounded-xl inline-flex items-center text-clueless-blue"
                       onClick={(e) => {
                         e.stopPropagation();
                         deleteExperience(session.user.id, experience.experience_id).then(() => {refreshData()});
@@ -159,12 +159,12 @@ function Portfolio({ query, renderData }) {
                 }}
                 >
                   <span className="-ml-14 text-gray-400 text-4xl "><VscTriangleRight/></span>
-                  <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-red-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
+                  <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-blue-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
                   <div className="flex grow flex-col">
                     <div className="flex flex-row justify-between items-center">
                       <h1 className="font-semibold text-xs sm:text-sm md:text-lg lg:text-xl">{experience.name}</h1>
                       <button 
-                      className="hover:text-red-900 rounded-xl inline-flex items-center text-wizeline-red"
+                      className="hover:text-red-900 rounded-xl inline-flex items-center text-clueless-blue"
                       onClick={(e) => {
                         e.stopPropagation();
                         deleteExperience(session.user.id, experience.experience_id).then(() => {refreshData()});
@@ -203,7 +203,7 @@ function Portfolio({ query, renderData }) {
                 {jobs.map((experience, i) => (
                   <div key={experience.experience_id} className="flex flex-row bg-gray-100 shadow-md w-full px-7 py-6 my-3 ml-2 justify-start items-center rounded-xl">
                     <span className="-ml-14 text-gray-400 text-4xl "><VscTriangleRight/></span>
-                    <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-red-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
+                    <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-blue-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
                     <div className="flex grow flex-col">
                       <div className="flex flex-row items-center">
                         <h1 className="font-semibold text-xs sm:text-sm md:text-lg lg:text-xl">{experience.name}</h1>
@@ -232,7 +232,7 @@ function Portfolio({ query, renderData }) {
                 {projects.map((experience, i) => (
                   <div key={experience.experience_id} className="flex flex-row bg-gray-100 shadow-md w-full px-7 py-6 my-3 ml-2 justify-start items-center rounded-xl">
                     <span className="-ml-14 text-gray-400 text-4xl "><VscTriangleRight/></span>
-                    <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-red-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
+                    <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-blue-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
                     <div className="flex grow flex-col">
                       <div className="flex flex-row items-center">
                         <h1 className="font-semibold text-xs sm:text-sm md:text-lg lg:text-xl">{experience.name}</h1>
@@ -261,7 +261,7 @@ function Portfolio({ query, renderData }) {
                 {education.map((experience, i) => (
                   <div key={experience.experience_id} className="flex flex-row bg-gray-100 shadow-md w-full px-7 py-6 my-3 ml-2 justify-start items-center rounded-xl">
                     <span className="-ml-14 text-gray-400 text-4xl "><VscTriangleRight/></span>
-                    <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-red-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
+                    <span className="whitespace-nowrap ml-3 mr-6 text-base sm:text-lg md:text-2xl lg:text-3xl justify-start font-thin text-blue-600">{(experience.start_date != experience.end_date) ? (experience.start_date.toString() + " - " + experience.end_date.toString()) : experience.start_date.toString()}</span>
                     <div className="flex grow flex-col">
                       <div className="flex flex-row items-center">
                         <h1 className="font-semibold text-xs sm:text-sm md:text-lg lg:text-xl">{experience.name}</h1>

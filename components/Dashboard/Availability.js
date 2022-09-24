@@ -67,7 +67,7 @@ function Availability({userId, viewingUserId, availability, onRefresh}){
                     <div className="w-full p-2 md:p-4 grow flex flex-row items-center justify-center">
                         
                             {intDays && intDays>0 ? (
-                                <div className="w-full h-full px-2 bg-wizeline-red rounded-lg shadow-md flex items-center justify-center">
+                                <div className="w-full h-full px-2 bg-clueless-blue rounded-lg shadow-md flex items-center justify-center">
                                     <p className="font-light text-xs sm:text-sm md:text-base text-center text-white leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                                         Available in <b>{intDays}</b> days
                                     </p>
@@ -114,7 +114,7 @@ function Availability({userId, viewingUserId, availability, onRefresh}){
                                             Save
                                         </button>
                                         <button
-                                            className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
+                                            className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
                                             onClick={handleOnClose}
                                         >
                                             Cancel
@@ -144,7 +144,7 @@ function Availability({userId, viewingUserId, availability, onRefresh}){
             <div className="w-full p-2 md:p-4 grow flex flex-row items-center justify-center">
                 
                     {intDays && intDays>0 ? (
-                        <div className="w-full h-full px-2 bg-wizeline-red rounded-lg shadow-md flex items-center justify-center">
+                        <div className="w-full h-full px-2 bg-clueless-blue rounded-lg shadow-md flex items-center justify-center">
                             <p className="font-light text-xs sm:text-sm md:text-base text-center text-white leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
                                 Available in <b>{intDays}</b> days
                             </p>

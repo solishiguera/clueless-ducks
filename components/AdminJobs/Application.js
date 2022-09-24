@@ -62,7 +62,7 @@ const Application = ({application, jobOffer, updateStatus}) => {
                </div>
                <div>
                   <h1 className="font-semibold text-lg mt-2">{application.user.name}</h1>
-                  <span className="font-semibold mb-2 px-3 mr-1 bg-red-100 text-red-600 rounded-md text-sm">{percent}%</span><span className="font-thin text-sm">Skill compatability</span>
+                  <span className="font-semibold mb-2 px-3 mr-1 bg-red-100 text-blue-600 rounded-md text-sm">{percent}%</span><span className="font-thin text-sm">Skill compatability</span>
                   <h1 className="text-gray-500 text-sm mt-1"> Applied Date: {setDate(application.date)}</h1>
                </div>
             </div>
@@ -84,7 +84,7 @@ const Application = ({application, jobOffer, updateStatus}) => {
                                       </div>
                                       <div className="flex items-center justify-center p-4 border-t-2 border-gray-200">
                                           <button className="bg-blue-500 text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md mr-4" type="button" onClick={() => accept(application.application_id)}>Confirm</button>                        
-                                          <button className="bg-wizeline-red text-white hover:bg-red-600 font-bold text-sm py-2 px-6 rounded-md" type="button" onClick={() => setShowAcceptModal(false)}>Cancel</button>
+                                          <button className="bg-wizeline-red text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md" type="button" onClick={() => setShowAcceptModal(false)}>Cancel</button>
                                       </div>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@ const Application = ({application, jobOffer, updateStatus}) => {
                               <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
                               </>
                   ) : null}
-                  <FaTimes onClick={() => setShowRejectModal(true)} className="text-4xl font-bold mr-5 text-wizeline-red hover:cursor-pointer hover:text-red-600"/>
+                  <FaTimes onClick={() => setShowRejectModal(true)} className="text-4xl font-bold mr-5 text-wizeline-red hover:cursor-pointer hover:text-blue-600"/>
                   {showRejectModal ? (
                               <>
                               <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -107,7 +107,7 @@ const Application = ({application, jobOffer, updateStatus}) => {
                                       </div>
                                       <div className="flex items-center justify-center p-4 border-t-2 border-gray-200">
                                           <button className="bg-blue-500 text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md mr-4" type="button" onClick={() => reject(application.application_id)}>Confirm</button>                        
-                                          <button className="bg-wizeline-red text-white hover:bg-red-600 font-bold text-sm py-2 px-6 rounded-md" type="button" onClick={() => setShowRejectModal(false)}>Cancel</button>
+                                          <button className="bg-wizeline-red text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md" type="button" onClick={() => setShowRejectModal(false)}>Cancel</button>
                                       </div>
                                     </div>
                                 </div>

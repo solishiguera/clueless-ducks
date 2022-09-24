@@ -29,7 +29,7 @@ function Sidebar({ sessionData, user }) {
       <div className="w-auto h-full flex flex-col p-2 sm:p-3 lg:p-4 pt-4 sm:pt-5 lg:pt-6 font-semibold sticky top-0">
           <div className="flex flex-col mb-2 border-b-2 border-solid border-gray-200">
             <div className="flex flex-row px-2 pb-3">
-              <div className="h-6 sm:h-7 lg:h-8 w-6 sm:w-7 lg:w-8 rounded-full border-[3px] border-wizeline-red">
+              <div className="h-6 sm:h-7 lg:h-8 w-6 sm:w-7 lg:w-8 rounded-full border-[3px] border-clueless-blue">
                 {user.image ? (
                     <img className="rounded-full" src={user.image} alt="Profile picture"/>
                 ) : (

@@ -248,7 +248,7 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
                                     >Save</button>
 
                                     <button
-                                        className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold"
+                                        className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold"
                                         onClick={handleCloseClick}
                                     >Cancel</button>
                                 </div>

@@ -191,7 +191,7 @@ function Jobs({ renderData }) {
                       <span
                         key={skill}
                         onClick={() => handleFilterSkillClick(skill)} 
-                        className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-red-100 text-red-600 rounded-md text-sm">
+                        className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-red-100 text-blue-600 rounded-md text-sm">
                         {skill}
                         <span className="text-red-400"> ×</span>
                       </span>)

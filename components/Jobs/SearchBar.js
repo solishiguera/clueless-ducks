@@ -29,7 +29,7 @@ function SearchBar({ placeholder, data, handleSkillClick }) {
     <div className="w-full h-12 p-2 mb-3 bg-gray-100 rounded-md">
       <div className="flex justify-between">
         <input
-          className="w-min ml-2 px-3 font-semibold mt-2 outline-none bg-red-100 text-red-600 rounded-md text-sm placeholder-red-600"
+          className="w-min ml-2 px-3 font-semibold mt-2 outline-none bg-red-100 text-blue-600 rounded-md text-sm placeholder-blue-600"
           type="text"
           placeholder={placeholder}
           value={wordEntered}
@@ -48,7 +48,7 @@ function SearchBar({ placeholder, data, handleSkillClick }) {
           {filteredData.slice(0, 15).map((value, key) => {
             return (
               <a onClick={clearInput} className="w-full h-8 ml-1 flex text-black font-thin text-sm bg-gray-100 cursor-pointer" href={value.link} target="_blank">
-                <span onClick={() => handleSkillClick(value)} className="cursor-pointer font-semibold mb-2 px-3 mr-2 bg-red-100 text-red-600 rounded-md text-sm hover:bg-red-200">{value.name}<span className="text-red-400 text-sm"> +</span></span>
+                <span onClick={() => handleSkillClick(value)} className="cursor-pointer font-semibold mb-2 px-3 mr-2 bg-red-100 text-blue-600 rounded-md text-sm hover:bg-red-200">{value.name}<span className="text-red-400 text-sm"> +</span></span>
 
               </a>
             );

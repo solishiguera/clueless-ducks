@@ -70,7 +70,7 @@ function adminJobs({renderData}) {
                 <div className="m-auto content-center h-full w-full">
                     <div className="columns-2 flex">
                         <div className="w-1/2 mr-4">
-                            <button className="bg-wizeline-red hover:bg-red-600 px-5 py-2 mb-4 font-bold rounded-xl inline-flex items-center text-white w-full text-center shadow-md text-md" 
+                            <button className="bg-clueless-blue hover:bg-blue-600 px-5 py-2 mb-4 font-bold rounded-xl inline-flex items-center text-white w-full text-center shadow-md text-md" 
                             onClick={() => {setData(null), setShowModal(true)}}>
                             <BsPlusLg className="text-sm mr-2"/>
                             Add Job Offer

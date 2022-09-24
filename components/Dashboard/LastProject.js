@@ -23,7 +23,7 @@ function LastProject({userId, viewingUserId, project}) {
             </div>
             <div className="w-full px-2 md:px-4 grow flex flex-row items-center justify-center">
                 {project ? (
-                    <p className='w-full text-center text-wizeline-red text-sm sm:text-base md:text-lg lg:text-xl font-light leading-tight sm:leading-snug md:leading-snug lg:leading-snug'>
+                    <p className='w-full text-center text-clueless-blue text-sm sm:text-base md:text-lg lg:text-xl font-light leading-tight sm:leading-snug md:leading-snug lg:leading-snug'>
                         {dateStr} &nbsp;<b className='text-black'>{project.name}</b>
                     </p>
                 ) : (

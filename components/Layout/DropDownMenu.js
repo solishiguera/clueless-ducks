@@ -69,7 +69,7 @@ function DropDownMenu() {
                         <div className="flex items-center justify-center p-4 border-t-2 border-solid border-gray-200 rounded-b">
                         
                         <button
-                            className="bg-wizeline-red text-white font-bold text-sm px-6 py-2 rounded-md shadow-sm hover:bg-red-600"
+                            className="bg-clueless-blue text-white font-bold text-sm px-6 py-2 rounded-md shadow-sm hover:bg-blue-600"
                             type="button"
                             onClick={() => setShowConfigModal(false)}
                         >

@@ -78,7 +78,7 @@ function SocialMedia({userId, viewingUserId, dashboardId, socialLinks, onRefresh
                       <div className='flex flex-rows items-center gap-2'>
                           <h1 className='font-semibold text-xs sm:text-sm md:text-base lg:text-lg'>URL:</h1>
                           <input type="text" className="bg-gray-200 px-2 md:px-3 py-1 w-full rounded-md text-justify text-xs sm:text-sm md:text-base outline-gray-400" placeholder="Write your social media URL" onChange={(e) => setSocialLink(e.target.value)} value={socialLink}/>
-                          <button className="bg-wizeline-red text-white font-bold text-xs sm:text-sm md:text-base px-2 py-1 rounded-md hover:bg-red-600 disabled:opacity-30" disabled={linkVerification()} onClick={handleOnCreate}>
+                          <button className="bg-clueless-blue text-white font-bold text-xs sm:text-sm md:text-base px-2 py-1 rounded-md hover:bg-blue-600 disabled:opacity-30" disabled={linkVerification()} onClick={handleOnCreate}>
                             +
                           </button>
                       </div>
@@ -88,7 +88,7 @@ function SocialMedia({userId, viewingUserId, dashboardId, socialLinks, onRefresh
                               <div className='flex flex-row items-center w-full gap-2 bg-gray-100 mt-2 px-1 rounded-full shadow-md' key={sLink.social_id}>
                                 <SocialIcon className='w-1/12' url={sLink.url} bgColor="none" fgColor ="black" target="_blank" style={{ height: 50, width: 50 }}/>
                                 <p className='w-10/12 truncate'>{sLink.url}</p>
-                                <VscTrash className='w-1/12 mx-2 text-wizeline-red text-xl hover:text-red-900 hover:cursor-pointer' onClick={() => handleOnDelete(sLink.social_id)}/>
+                                <VscTrash className='w-1/12 mx-2 text-clueless-blue text-xl hover:text-red-900 hover:cursor-pointer' onClick={() => handleOnDelete(sLink.social_id)}/>
                               </div>
                             ) )}
                           </div>
@@ -100,7 +100,7 @@ function SocialMedia({userId, viewingUserId, dashboardId, socialLinks, onRefresh
                     {/*footer*/}
                     <div className="flex items-center justify-end p-4 lg:p-6 border-t-2 border-solid border-gray-200 rounded-b">
                       <button
-                        className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
+                        className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
                           onClick={handleOnClose}
                       >
                         Close
