@@ -36,14 +36,14 @@ function JobOffersBoard({jobOffers, jobOfferSelected, setjobOfferSelected, setDa
                     <div className="mt-1 mb-2 flex flex-wrap">
                         {
                         job.jobOffer_skills ? job.jobOffer_skills.map((offer_skills) =>
-                            <span key={offer_skills.skill.skill_id} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-red-600 rounded-md text-sm">{offer_skills.skill.name}</span>) : ''
+                            <span key={offer_skills.skill.skill_id} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-blue-600 rounded-md text-sm">{offer_skills.skill.name}</span>) : ''
                         }
                     </div>
                     <div className="flex flex-wrap items-center text-gray-500">
                         <h1 className="text-sm mr-2">{setDate(job.start_date)} &nbsp;•&nbsp; {job.location} &nbsp;•&nbsp; {(job.contract == "PART_TIME") ? "Part Time" : "Full Time"}</h1> 
                         <div className="ml-auto text font-bold inline-flex items-center">
                         <MdOutlineEdit onClick={() => { setData(job); setShowModal(true);}} className="hover:cursor-pointer hover:text-gray-900 mr-2 text-gray-00"/>
-                        <VscTrash onClick={() => {setShowDeleteModal(true); setJobDeleted(job.job_id)}} className="hover:cursor-pointer hover:text-red-900 text-red-600"/>
+                        <VscTrash onClick={() => {setShowDeleteModal(true); setJobDeleted(job.job_id)}} className="hover:cursor-pointer hover:text-red-900 text-blue-600"/>
                         {showDeleteModal ? (
                               <>
                               <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -58,7 +58,7 @@ function JobOffersBoard({jobOffers, jobOfferSelected, setjobOfferSelected, setDa
                                       </div>
                                       <div className="flex items-center justify-center p-4 border-t-2 border-gray-200">
                                           <button className="bg-blue-500 text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md mr-4" type="button" onClick={() => confirmDelete()}>Confirm</button>                        
-                                          <button className="bg-wizeline-red text-white hover:bg-red-600 font-bold text-sm py-2 px-6 rounded-md" type="button" onClick={() => setShowDeleteModal(false)}>Cancel</button>
+                                          <button className="bg-clueless-blue text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md" type="button" onClick={() => setShowDeleteModal(false)}>Cancel</button>
                                       </div>
                                     </div>
                                 </div>

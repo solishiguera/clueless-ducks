@@ -10,7 +10,7 @@ module.exports = {
         'inset': 'inset 6px 6px 15px -2px rgb(0 0 0 / 0.3)',
       },
       colors: {
-        'wizeline-red': '#e93d44',
+        'clueless-blue': '#335BB8',
       }      
     },
   },

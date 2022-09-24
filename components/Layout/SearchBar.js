@@ -85,7 +85,7 @@ function SearchBar() {
                 <input
                     className="w-full font-light text-xs sm:text-sm lg:text-base text-gray-600 outline-none placeholder-gray-400"
                     type="text"
-                    placeholder="Search on Wizelink"
+                    placeholder="Search on CluelessManagement"
                     value={wordEntered}
                     onChange={handleOnChange}
                     onClick={handleOnClick}

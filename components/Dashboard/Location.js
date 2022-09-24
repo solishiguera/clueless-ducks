@@ -112,11 +112,11 @@ function Location({userId, viewingUserId, timezone, location, latitude, longitud
                                 </div>
                                 <div className="h-auto w-1/2 sm:w-5/12 lg:w-1/2 flex flex-col">
                                     <div className="h-auto w-full p-2 flex flex-row items-center rounded-full bg-gray-100 shadow-md mb-2 md:mb-3">
-                                        <FaMapMarkerAlt className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-wizeline-red'/>
+                                        <FaMapMarkerAlt className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-clueless-blue'/>
                                         <p className="h-auto w-10/12 md:w-11/12 lg:w-10/12 leading-none sm:leading-tight md:leading-tight lg:leading-tight text-xs sm:text-sm md:text-base">{location}</p>
                                     </div>
                                     <div className="h-auto w-full p-2 flex flex-row items-center rounded-full bg-gray-100 shadow-md">
-                                        <FaClock className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-wizeline-red'/>
+                                        <FaClock className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-clueless-blue'/>
                                         <TimerWithNoSSR timezone={timezone}/>
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@ function Location({userId, viewingUserId, timezone, location, latitude, longitud
                                             Save
                                         </button>
                                         <button
-                                            className="bg-wizeline-red hover:bg-red-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
+                                            className="bg-clueless-blue hover:bg-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold text-sm lg:text-base"
                                             onClick={handleOnClose}
                                         >
                                             Cancel
@@ -213,11 +213,11 @@ function Location({userId, viewingUserId, timezone, location, latitude, longitud
                             </div>
                             <div className="h-auto w-1/2 sm:w-5/12 lg:w-1/2 flex flex-col">
                                 <div className="h-auto w-full p-2 flex flex-row items-center rounded-full bg-gray-100 shadow-md mb-2 md:mb-3">
-                                    <FaMapMarkerAlt className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-wizeline-red'/>
+                                    <FaMapMarkerAlt className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-clueless-blue'/>
                                     <p className="h-auto w-10/12 md:w-11/12 lg:w-10/12 leading-none sm:leading-tight md:leading-tight lg:leading-tight text-xs sm:text-sm md:text-base">{location}</p>
                                 </div>
                                 <div className="h-auto w-full p-2 flex flex-row items-center rounded-full bg-gray-100 shadow-md">
-                                    <FaClock className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-wizeline-red'/>
+                                    <FaClock className='h-auto w-2/12 md:w-1/12 lg:w-2/12 p-1 mx-2 text-clueless-blue'/>
                                     <TimerWithNoSSR timezone={timezone}/>
                                 </div>
                             </div>

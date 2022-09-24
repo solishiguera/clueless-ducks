@@ -28,7 +28,7 @@ const ApplicationBoard = ({user_id, application, eraseApplication, onSave}) => {
           {    
             () => eraseApplication(application) ? setShowModal(true) : setShowModal(false)
           }
-          className="hover:text-red-900 rounded-xl font-bold inline-flex items-center text-red-600"
+          className="hover:text-red-900 rounded-xl font-bold inline-flex items-center text-blue-600"
           ><VscTrash/>
           </button>
         ) : (
@@ -65,7 +65,7 @@ const ApplicationBoard = ({user_id, application, eraseApplication, onSave}) => {
                     Confirm
                     </button>                        
                     <button
-                    className="bg-wizeline-red text-white hover:bg-red-600 font-bold text-sm py-2 px-6 rounded-md"
+                    className="bg-clueless-blue text-white hover:bg-blue-600 font-bold text-sm py-2 px-6 rounded-md"
                     type="button"
                     onClick={() => setShowModal(false)}
                     >

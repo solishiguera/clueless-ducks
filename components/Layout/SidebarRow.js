@@ -4,7 +4,7 @@ function SidebarRow({src, Icon, title, status}) {
 
   if (status === "active"){
     return (
-      <div className="flex items-center space-x-2 px-2 py-3 mb-2 text-wizeline-red hover:bg-gray-100 rounded-xl cursor-pointer transition duration-00">
+      <div className="flex items-center space-x-2 px-2 py-3 mb-2 text-clueless-blue hover:bg-gray-100 rounded-xl cursor-pointer transition duration-00">
           {src && (
             <div className="h-8 w-8">
               <Image 

@@ -37,7 +37,7 @@ function UserCard({ user, onRefresh }) {
                         <>
                             <p className="text-sm font-semibold">Change to admin:</p>
                             <div className="mt-2 flex p-1 w-[4.2rem] shadow-md border-[0.15rem] border-gray-400 rounded-full cursor-pointer" onClick={handleOnClick}>
-                                <div className={"w-8 h-5 rounded-full shadow-sm cursor-pointer " + (user.role == "ADMIN" ? "ml-[1.4rem] bg-green-500" : "bg-wizeline-red")}/>
+                                <div className={"w-8 h-5 rounded-full shadow-sm cursor-pointer " + (user.role == "ADMIN" ? "ml-[1.4rem] bg-green-500" : "bg-clueless-blue")}/>
                             </div>
                         </>
                     ) : (
