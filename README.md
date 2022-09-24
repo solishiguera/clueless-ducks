@@ -1,35 +1,5 @@
 # Installation Manual
 
-## Control Table
-
-| Organism       | Project  | Author                                                                                                                          |
-| -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Wize Profilers | WizeLink | Carlos Enrique Lucio Domínguez, Elmer Osiel Ávila Vargas, Angel Martín Luna Cantú, Andrés Guerra Ochoa, Santiago Torres Álvarez |
-
-## System Description
-
-| Module   | Description  |
-| -------- | ------------ |
-| Web Page | The hypertext document on the World Wide Web. Web pages are delivered by a web server to the user and displayed in a web browser. |
-| Web API  | The Application Programming Interface can be thought of as a contract which defines how the page and database communicate with each other using requests and responses. |
-| Database | An organized collection of structured information, or data, typically stored electronically in a computer system. |
-
-## Servers
-
-### Instance 1 - Web Server (Web Page and Web API)
-| Data | Minimum Value | Suggested Value |
-| ---- | ------------- | --------------- |
-| CPU  | 2 vCPUs       | 2 vCPUs         |
-| RAM  | 4 GB          | 4 GB            |
-| SSD  | 80 GB         | 80 GB           | 
-
-### Instance 2 - Database Server
-| Data | Minimum Value | Suggested Value |
-| ---- | ------------- | --------------- |
-| CPU  | 2 vCPUs       | 2 vCPUs         |
-| RAM  | 1 GB          | 2 GB            |
-| SSD  | 40 GB         | 80 GB           | 
-
 ## Software Resources
 
 **Web Server:** Node v16.14.2
