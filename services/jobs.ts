@@ -1,12 +1,13 @@
 import prisma from "../lib/prisma";
 
-export async function createJob(position, start_date, description, contract, location, skills){
+export async function createJob(position, start_date, end_date, description, contract, location, skills){
 
     // Database query
     const jobOffer = await prisma.jobOffer.create({
         data: {
             position: position,
             start_date: new Date(start_date),
+            end_date: new Date(end_date),
             description: description,
             contract: contract,
             location: location,
@@ -102,7 +103,7 @@ export async function getJobs(){
 
 }
 
-export async function updateJob(job_id, position, start_date, description, contract, location, skills){
+export async function updateJob(job_id, position, start_date, end_date, description, contract, location, skills){
 
     // Database query
     const jobOffer = await prisma.jobOffer.update({
@@ -112,6 +113,7 @@ export async function updateJob(job_id, position, start_date, description, contr
         data: {
             position: position,
             start_date: new Date(start_date),
+            end_date: new Date(end_date),
             description: description,
             contract: contract,
             location: location,

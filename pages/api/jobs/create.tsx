@@ -19,13 +19,13 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     }
 
     // Obtaining variables from request
-    const { position, start_date, description, contract, location, skills } = req.body;
+    const { position, start_date, end_date, description, contract, location, skills } = req.body;
 
     // Errors managment
     if (position && start_date && description) {
         try {
             // Calling service to create a job offer
-            const jobOffer = await createJob(position, start_date, description, "FULL_TIME", "", skills);
+            const jobOffer = await createJob(position, start_date, end_date, description, "FULL_TIME", "", skills);
 
             res.status(200);
             res.json(jobOffer);

@@ -40,7 +40,8 @@ function JobOffersBoard({jobOffers, jobOfferSelected, setjobOfferSelected, setDa
                         }
                     </div>
                     <div className="flex flex-wrap items-center text-gray-500">
-                        <h1 className="text-sm mr-2">{setDate(job.start_date)} </h1> 
+                        <h1 className="text-sm mr-2"><b>Duration:</b> &nbsp;{setDate(job.start_date)}  -</h1> 
+                        <h1 className="text-sm mr-2">{setDate(job.end_date)} </h1> 
                         <div className="ml-auto text font-bold inline-flex items-center">
                         <MdOutlineEdit onClick={() => { setData(job); setShowModal(true);}} className="hover:cursor-pointer hover:text-gray-900 mr-2 text-gray-00"/>
                         <VscTrash onClick={() => {setShowDeleteModal(true); setJobDeleted(job.job_id)}} className="hover:cursor-pointer hover:text-red-900 text-blue-600"/>

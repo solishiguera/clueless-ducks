@@ -32,6 +32,7 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
     const [jobOffer, setjobOffer] = useState();
     const [newSkills, setNewSkills] = useState([]);
     const [month, setNewMonth] = useState(null);
+    const [endMonth, setNewEndMonth] = useState(null);
     const handleCloseClick = (e) => {
         e.preventDefault();
         onClose();
@@ -45,7 +46,8 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
     const handleSubmit = (e) => {
         
         e.preventDefault();
-        jobOffer["start_date"] = jobOffer["start_date"] + "-" + month 
+        jobOffer["start_date"] = jobOffer["start_date"] + "-" + month;
+        jobOffer["end_date"] = jobOffer["end_date"] + "-" + endMonth;  
         
         if (data) {
             updateJob(jobOffer).then(() => {refreshData()});
@@ -70,9 +72,10 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
         if (data) {
             
             setNewSkills(getObjectSkills(data.jobOffer_skills));
-            setjobOffer({job_id: data.job_id, position: data.position, start_date: data.start_date.split("-")[0], description: data.description, contract: data.contract, location: data.location, skills: setSkillsJson(getObjectSkills(data.jobOffer_skills))});
+            setjobOffer({job_id: data.job_id, position: data.position, start_date: data.start_date.split("-")[0], end_date: data.end_date.split("-")[0], description: data.description, contract: data.contract, location: data.location, skills: setSkillsJson(getObjectSkills(data.jobOffer_skills))});
             
             setNewMonth(setMonth(data.start_date))
+            setNewEndMonth(setMonth(data.end_date))
             
         } else {
             setjobOffer({job_id: "", position: "", start_date: "", description: "", contract: "", location: "", skills: ""});
@@ -213,6 +216,39 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
                                         value={month}
                                     >
                                         <option value="" disabled selected hidden>Start month</option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+
+                                    </select>
+
+                                    <select
+                                        name="end_date"
+                                        className="bg-gray-200 focus:text-black focus:outline-none w-1/7 py-3 px-4 mb-2 mr-5 rounded-md"
+                                        onChange={handleChange}
+                                        value={jobOffer.end_date}
+                                    >
+                                        <option value="" disabled selected hidden>End year</option>
+                                        {getYearsArray(1950, new Date().getUTCFullYear() + 5).map((year) => (
+                                            <option key={year} value={year}>{year}</option>
+                                        ))}
+                                    </select>
+
+                                    <select
+                                        className="bg-gray-200 focus:text-black focus:outline-none w-1/7 py-3 px-4 mb-2 mr-5 rounded-md"
+                                        onChange={(e) => setNewEndMonth(e.target.value)}
+                                        value={endMonth}
+                                    >
+                                        <option value="" disabled selected hidden>End month</option>
                                         <option value="January">January</option>
                                         <option value="February">February</option>
                                         <option value="March">March</option>

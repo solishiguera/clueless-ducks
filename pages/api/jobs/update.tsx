@@ -18,13 +18,13 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
         return res.status(405).json({ error: "Method not allowed" });
     }
     
-    const {job_id, position, start_date, description, contract, location, skills } = req.body;
+    const {job_id, position, start_date, end_date, description, skills} = req.body;
 
     // Errors managment
-    if (job_id && position && start_date && description && contract && location) {
+    if (job_id && position && start_date && description) {
         try {
             // Calling service to update job offer
-            const jobOffer = await updateJob(job_id, position, start_date, description, contract, location, skills);
+            const jobOffer = await updateJob(job_id, position, start_date, end_date, description, "FULL_TIME", "", skills);
 
             res.status(200);
             res.json(jobOffer);

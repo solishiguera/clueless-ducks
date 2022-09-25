@@ -67,7 +67,8 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
                   <h1 className="text-xs sm:text-sm md:text-base text-justify">{job.description}</h1> 
                </div>
                <div className="flex text-gray-500">
-                  <h1 className="text-xs sm:text-sm md:text-base">{setDate(job.start_date)}</h1>
+                  <h1 className="text-xs sm:text-sm md:text-base"><b>Duration:</b> &nbsp;{setDate(job.start_date)} -&nbsp;</h1>
+                  <h1 className="text-xs sm:text-sm md:text-base">{setDate(job.end_date)}</h1>
                   <button onClick={() => handleApplyNow(job) ? setShowModal(true) : errorApplyNow()}
                   className="font-bold text-gray-600 ml-auto bg-gray-100 px-3 rounded-md text-xs md:text-sm hover:bg-gray-200">Assign Me
                   </button>
@@ -136,7 +137,8 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
             <h1 className="text-xs sm:text-sm md:text-base text-justify">{job.description}</h1> 
          </div>
          <div className="flex text-gray-500">
-            <h1 className="text-xs sm:text-sm md:text-base">{setDate(job.start_date)} &nbsp;•&nbsp; {job.location} &nbsp;•&nbsp; {(job.contract == "PART_TIME") ? "Part Time" : "Full Time"}</h1>
+            <h1 className="text-xs sm:text-sm md:text-base"><b>Duration:</b> &nbsp;{setDate(job.start_date)} -</h1>
+            <h1 className="text-xs sm:text-sm md:text-base">{setDate(job.end_date)}</h1>
          </div>
       </div>
    )
