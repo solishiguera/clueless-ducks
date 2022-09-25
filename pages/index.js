@@ -44,8 +44,8 @@ export default function Home() {
     <Layout sessionData={sessionDataToLayout}>
       <div className="w-full flex flex-row items-center bg-white rounded-xl p-5 sm:p-6 md:p-7 p-8 shadow-md">
         <div className="flex flex-col w-3/12">
-          <p className="ml-1 md:ml-4 lg:ml-5 font-light text-base sm:text-lg md:text-2xl lg:text-4xl mb-4">Welcome to <b className="font-bold">Wize</b><b className="font-bold text-clueless-blue">Link</b>!</p>
-          <p className="ml-1 md:ml-4 lg:ml-5 font-light text-xs sm:text-sm md:text-base lg:text-xl">The profiles web application for wizeliners</p>
+          <p className="ml-1 md:ml-4 lg:ml-5 font-light text-base sm:text-lg md:text-2xl lg:text-4xl mb-4">Welcome to <b className="font-bold">Clueless</b><b className="font-bold text-clueless-blue">Management</b>!</p>
+          <p className="ml-1 md:ml-4 lg:ml-5 font-light text-xs sm:text-sm md:text-base lg:text-xl">The profiles web application for clueless managers</p>
         </div>
         <div className="w-9/12 flex flex-wrap justify-center">
           <Image className="max-w-full h-auto" src={home2}/>
