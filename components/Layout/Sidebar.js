@@ -44,17 +44,17 @@ function Sidebar({ sessionData, user }) {
             </Link>
             
             <Link href={"/" + user.id + "/portfolio"}>
-              <a><SidebarRow Icon = {BriefcaseIcon} title="Portfolio" status="active"/></a>
+              <a><SidebarRow Icon = {BriefcaseIcon} title="Experience" status="active"/></a>
             </Link>
           </div>
 
           <Link href="/jobs">
-            <a><SidebarRow Icon = {NewspaperIcon} title="Jobs" status="active"/> </a>
+            <a><SidebarRow Icon = {NewspaperIcon} title="Tasks" status="active"/> </a>
           </Link>
 
           {sessionData && (sessionData.role == "ADMIN" || sessionData.role == "MASTER") ? (
             <Link href="/jobs/admin">
-              <a><SidebarRow Icon = {ViewGridAddIcon} title="A-Jobs" status="active"/> </a>
+              <a><SidebarRow Icon = {ViewGridAddIcon} title="A-Tasks" status="active"/> </a>
             </Link>
           ) : (
             <></>

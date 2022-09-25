@@ -40,7 +40,7 @@ function JobOffersBoard({jobOffers, jobOfferSelected, setjobOfferSelected, setDa
                         }
                     </div>
                     <div className="flex flex-wrap items-center text-gray-500">
-                        <h1 className="text-sm mr-2">{setDate(job.start_date)} &nbsp;•&nbsp; {job.location} &nbsp;•&nbsp; {(job.contract == "PART_TIME") ? "Part Time" : "Full Time"}</h1> 
+                        <h1 className="text-sm mr-2">{setDate(job.start_date)} </h1> 
                         <div className="ml-auto text font-bold inline-flex items-center">
                         <MdOutlineEdit onClick={() => { setData(job); setShowModal(true);}} className="hover:cursor-pointer hover:text-gray-900 mr-2 text-gray-00"/>
                         <VscTrash onClick={() => {setShowDeleteModal(true); setJobDeleted(job.job_id)}} className="hover:cursor-pointer hover:text-red-900 text-blue-600"/>
@@ -50,10 +50,10 @@ function JobOffersBoard({jobOffers, jobOfferSelected, setjobOfferSelected, setDa
                                 <div className="relative w-[18rem] my-6 mx-auto">
                                     <div className="rounded-md shadow-md relative flex flex-col w-full bg-white">                                      
                                       <div className="flex items-center p-4 border-b-2 border-gray-200">
-                                          <h3 className="text-2xl font-bold text-black">Delete job offer</h3>
+                                          <h3 className="text-2xl font-bold text-black">Delete task</h3>
                                       </div>
                                       <div className="container items-center">
-                                          <h1 className="text-sm text-justify text-black px-5 py-3 font-semibold">If you delete this job offer all the applications correpsonding to this offer will also be erased.</h1>
+                                          <h1 className="text-sm text-justify text-black px-5 py-3 font-semibold">If you delete this task all the applications corresponding to this task will also be erased.</h1>
                                           <h1 className="text-sm text-justify text-black px-5 py-3 font-semibold">This action is irreversible.</h1>  
                                       </div>
                                       <div className="flex items-center justify-center p-4 border-t-2 border-gray-200">

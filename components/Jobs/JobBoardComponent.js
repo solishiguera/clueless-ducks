@@ -20,7 +20,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
       const [showModal, setShowModal] = useState(false);
 
       const errorApplyNow = () => {
-         toast.error('You have already applied to this job!', {
+         toast.error('You have already applied to this task!', {
             toastId: "error1",
             position: "bottom-center",
             autoClose: 3000,
@@ -33,7 +33,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
       }
 
       const successApplyNow = () => {
-         toast.success('You have applied. Good Luck!', {
+         toast.success('You have applied. Wait for the answer.', {
             toastId: "error1",
             position: "bottom-center",
             autoClose: 3000,
@@ -60,16 +60,16 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
                <div className="mb-2 mt-1 flex flex-wrap">
                   {
                      job.jobOffer_skills ? job.jobOffer_skills.map((offer_skills) =>
-                        <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-blue-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
+                        <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-red-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
                   }
                </div>
                <div className="mb-2">
                   <h1 className="text-xs sm:text-sm md:text-base text-justify">{job.description}</h1> 
                </div>
                <div className="flex text-gray-500">
-                  <h1 className="text-xs sm:text-sm md:text-base">{setDate(job.start_date)} &nbsp;•&nbsp; {job.location} &nbsp;•&nbsp; {(job.contract == "PART_TIME") ? "Part Time" : "Full Time"}</h1>
+                  <h1 className="text-xs sm:text-sm md:text-base">{setDate(job.start_date)}</h1>
                   <button onClick={() => handleApplyNow(job) ? setShowModal(true) : errorApplyNow()}
-                  className="font-bold text-gray-600 ml-auto bg-gray-100 px-3 rounded-md text-xs md:text-sm hover:bg-gray-200">Apply Now
+                  className="font-bold text-gray-600 ml-auto bg-gray-100 px-3 rounded-md text-xs md:text-sm hover:bg-gray-200">Assign Me
                   </button>
                </div>
             </div>
@@ -88,7 +88,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
                         
                         {/*body*/}
                         <div className="container items-center">
-                           <h1 className="text-sm text-justify text-black px-5 py-3">If you apply for this job you will be reviewed by your current dashboard and portfolio. Make sure every area of your Wizelink account is up to date. Once you confirm you will be able to see the state of your application on your Jobs window.</h1> 
+                           <h1 className="text-sm text-justify text-black px-5 py-3">If you select this task you will be reviewed by your current dashboard and portfolio. Make sure every area of your account is up to date. Once you confirm you will be able to see the state of your request on your Tasks window.</h1> 
                         </div>
                         {/*footer*/}
                         <div className="flex items-center justify-center p-4 border-t-2 border-gray-200">
@@ -129,7 +129,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
          <div className="mb-2 mt-1 flex flex-wrap">
             {
                job.jobOffer_skills ? job.jobOffer_skills.map((offer_skills) =>
-                  <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-blue-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
+                  <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-red-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
             }
          </div>
          <div className="mb-2">

@@ -73,7 +73,7 @@ function adminJobs({renderData}) {
                             <button className="bg-clueless-blue hover:bg-blue-600 px-5 py-2 mb-4 font-bold rounded-xl inline-flex items-center text-white w-full text-center shadow-md text-md" 
                             onClick={() => {setData(null), setShowModal(true)}}>
                             <BsPlusLg className="text-sm mr-2"/>
-                            Add Job Offer
+                            Add Task
                             </button>
                             <JobOffersBoard jobOffers={renderData.jobsData} jobOfferSelected={jobOfferSelected} setjobOfferSelected={setjobOfferSelected} setData={setData} setShowModal={setShowModal} onSave={refreshData}/>
 
@@ -81,7 +81,7 @@ function adminJobs({renderData}) {
                         <div className="w-1/2 ml-4">
                             <div className="mb-4 bg-white rounded-xl shadow-md px-5 py-2 font-bold inline-flex items-center w-full text-gray-900 text-md">
                                 <MdHowToVote className="text-xl mr-2"/>
-                                <h1 className="text-md"> Manage Employee Applications</h1>
+                                <h1 className="text-md"> Manage Employee Requests</h1>
                             </div>
                             {(jobOfferSelected && jobOfferSelected.applications.length > 0) ? (
                                 jobOfferSelected.applications.map((application) => <Application application={application} key={application.application_id} jobOffer={jobOfferSelected} updateStatus={updateStatus}/>)
