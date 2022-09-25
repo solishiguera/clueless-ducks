@@ -131,6 +131,7 @@ model JobOffer {
   job_id      String        @id @default(cuid())
   position    String        @db.VarChar(50)
   start_date  DateTime
+  end_date    DateTime
   description String        @db.VarChar(750)
   contract    ContractType
   location    String        @db.VarChar(100)
