@@ -189,29 +189,9 @@ function Jobs({ renderData }) {
                        <span
                          key={skill}
                          onClick={() => handleFilterSkillClick(skill)} 
-                         className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-red-100 text-blue-600 rounded-md text-sm">
+                         className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-blue-100 text-clueless-blue rounded-md text-sm">
                          {skill}
                          <span className="text-red-400"> ×</span>
-                       </span>)
-                   }
-                   {
-                     filterContracts.length > 0 && filterContracts.map((contract) => 
-                       <span
-                         key={contract} 
-                         onClick={() => handleFilterContractClick(contract)} 
-                         className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-green-100 text-green-600 rounded-md text-sm">
-                         {(contract == "PART_TIME") ? "Part Time" : "Full Time"}
-                         <span className="text-green-400"> ×</span>
-                       </span>)
-                   }
-                   {
-                     filterLocations.length > 0 && filterLocations.map((location) => 
-                       <span
-                         key={location} 
-                         onClick={() => handleFilterLocationClick(location)} 
-                         className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-blue-100 text-blue-600 rounded-md text-sm">
-                         {location}
-                         <span className="text-blue-400"> ×</span>
                        </span>)
                    }
                    <button onClick={clearFilters} className="font-bold text-gray-600 ml-auto bg-gray-100 px-3 mb-2 rounded-md text-sm hover:bg-gray-200">Clear</button>

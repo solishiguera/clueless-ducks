@@ -29,7 +29,7 @@ function SearchBar({ placeholder, data, handleSkillClick }) {
     <div className="w-full h-12 p-2 mb-3 bg-gray-100 rounded-md">
       <div className="flex justify-between">
         <input
-          className="w-min ml-2 px-3 font-semibold mt-2 outline-none bg-red-100 text-blue-600 rounded-md text-sm placeholder-blue-600"
+          className="w-min ml-2 px-3 font-semibold mt-2 outline-none bg-blue-100 text-clueless-blue rounded-md text-sm placeholder-blue-400"
           type="text"
           placeholder={placeholder}
           value={wordEntered}

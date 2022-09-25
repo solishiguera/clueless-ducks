@@ -60,7 +60,7 @@ const JobBoardComponent = ({userId, job, handleApplyNow, handleConfirm}) => {
                <div className="mb-2 mt-1 flex flex-wrap">
                   {
                      job.jobOffer_skills ? job.jobOffer_skills.map((offer_skills) =>
-                        <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-red-600 rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
+                        <span key={offer_skills.skill.name} className="font-semibold mb-2 px-3 mr-2 bg-blue-100 text-clueless-blue rounded-md text-xs md:text-sm">{offer_skills.skill.name}</span>) : ''
                   }
                </div>
                <div className="mb-2">

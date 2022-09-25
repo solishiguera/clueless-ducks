@@ -36,7 +36,7 @@ function JobOffersBoard({jobOffers, jobOfferSelected, setjobOfferSelected, setDa
                     <div className="mt-1 mb-2 flex flex-wrap">
                         {
                         job.jobOffer_skills ? job.jobOffer_skills.map((offer_skills) =>
-                            <span key={offer_skills.skill.skill_id} className="font-semibold mb-2 px-3 mr-2 bg-red-100 text-blue-600 rounded-md text-sm">{offer_skills.skill.name}</span>) : ''
+                            <span key={offer_skills.skill.skill_id} className="font-semibold mb-2 px-3 mr-2 bg-blue-100 text-clueless-blue rounded-md text-sm">{offer_skills.skill.name}</span>) : ''
                         }
                     </div>
                     <div className="flex flex-wrap items-center text-gray-500">
@@ -44,7 +44,7 @@ function JobOffersBoard({jobOffers, jobOfferSelected, setjobOfferSelected, setDa
                         <h1 className="text-sm mr-2">{setDate(job.end_date)} </h1> 
                         <div className="ml-auto text font-bold inline-flex items-center">
                         <MdOutlineEdit onClick={() => { setData(job); setShowModal(true);}} className="hover:cursor-pointer hover:text-gray-900 mr-2 text-gray-00"/>
-                        <VscTrash onClick={() => {setShowDeleteModal(true); setJobDeleted(job.job_id)}} className="hover:cursor-pointer hover:text-red-900 text-blue-600"/>
+                        <VscTrash onClick={() => {setShowDeleteModal(true); setJobDeleted(job.job_id)}} className="hover:cursor-pointer hover:text-red-900 text-red-600"/>
                         {showDeleteModal ? (
                               <>
                               <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">

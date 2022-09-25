@@ -62,14 +62,14 @@ const Application = ({application, jobOffer, updateStatus}) => {
                </div>
                <div>
                   <h1 className="font-semibold text-lg mt-2">{application.user.name}</h1>
-                  <span className="font-semibold mb-2 px-3 mr-1 bg-red-100 text-blue-600 rounded-md text-sm">{percent}%</span><span className="font-thin text-sm">Skill compatability</span>
+                  <span className="font-semibold mb-2 px-3 mr-1 bg-blue-100 text-clueless-blue rounded-md text-sm">{percent}%</span><span className="font-thin text-sm">Skill compatability</span>
                   <h1 className="text-gray-500 text-sm mt-1"> Selected Date: {setDate(application.date)}</h1>
                </div>
             </div>
 
             {application.status == "PENDING" ? 
                <div className="inline-flex items-center my-2 bg-gray-100 p-4 rounded-lg">
-                  <FaCheck onClick={() => setShowAcceptModal(true)} className="text-4xl ml-5 mr-5 text-gray-500 hover:cursor-pointer hover:text-gray-600"/>
+                  <FaCheck onClick={() => setShowAcceptModal(true)} className="text-4xl ml-5 mr-5 text-green-500 hover:cursor-pointer hover:text-green-600"/>
                   {showAcceptModal ? (
                               <>
                               <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -92,7 +92,7 @@ const Application = ({application, jobOffer, updateStatus}) => {
                               <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
                               </>
                   ) : null}
-                  <FaTimes onClick={() => setShowRejectModal(true)} className="text-4xl font-bold mr-5 text-wizeline-red hover:cursor-pointer hover:text-blue-600"/>
+                  <FaTimes onClick={() => setShowRejectModal(true)} className="text-4xl font-bold mr-5 text-red-500 hover:cursor-pointer hover:text-red-600"/>
                   {showRejectModal ? (
                               <>
                               <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">

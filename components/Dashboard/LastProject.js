@@ -28,7 +28,7 @@ function LastProject({userId, viewingUserId, project}) {
                     </p>
                 ) : (
                     <p className='w-full text-center text-xs md:text-sm font-light leading-none sm:leading-tight md:leading-tight lg:leading-tight'>
-                        {userId == viewingUserId ? "You do not have past projects! Click on Portfolio and add a project." : "User has not past projects."}
+                        {userId == viewingUserId ? "You do not have past projects! Click on Experience and add a project." : "User has not past projects."}
                     </p>
                 )}
                 
