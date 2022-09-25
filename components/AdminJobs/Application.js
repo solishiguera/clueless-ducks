@@ -63,7 +63,7 @@ const Application = ({application, jobOffer, updateStatus}) => {
                <div>
                   <h1 className="font-semibold text-lg mt-2">{application.user.name}</h1>
                   <span className="font-semibold mb-2 px-3 mr-1 bg-red-100 text-blue-600 rounded-md text-sm">{percent}%</span><span className="font-thin text-sm">Skill compatability</span>
-                  <h1 className="text-gray-500 text-sm mt-1"> Applied Date: {setDate(application.date)}</h1>
+                  <h1 className="text-gray-500 text-sm mt-1"> Selected Date: {setDate(application.date)}</h1>
                </div>
             </div>
 

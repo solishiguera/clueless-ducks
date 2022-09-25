@@ -22,10 +22,10 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     const { position, start_date, description, contract, location, skills } = req.body;
 
     // Errors managment
-    if (position && start_date && description && contract && location) {
+    if (position && start_date && description) {
         try {
             // Calling service to create a job offer
-            const jobOffer = await createJob(position, start_date, description, contract, location, skills);
+            const jobOffer = await createJob(position, start_date, description, "FULL_TIME", "", skills);
 
             res.status(200);
             res.json(jobOffer);

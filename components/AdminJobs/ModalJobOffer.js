@@ -140,7 +140,7 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
                             {/*header*/}
                             <div className="flex items-start justify-between p-5 border-b-2 border-solid border-slate-200 rounded-t">
                                 <h3 className="text-2xl text-black font-semibold">
-                                    {data ? "Edit Job Offer" : "Add Job Offer"}
+                                    {data ? "Edit Task" : "Add Task"}
                                 </h3>
                             </div>
                             {/*body*/}
@@ -150,7 +150,7 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
                                     <input
                                         type="text"
                                         className="bg-gray-200 focus:text-black focus:outline-none w-full py-3 px-4 mb-5 rounded-md"
-                                        placeholder="Write title of position"
+                                        placeholder="Write title of this task"
                                         name="position"
                                         onChange={handleChange}
                                         value={jobOffer.position}
@@ -186,14 +186,14 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
                                         value={jobOffer.description}
                                     ></textarea>
 
-                                    <input
+                                    {/* <input
                                         type="text"
                                         className="bg-gray-200 focus:text-black focus:outline-none w-1/7 py-3 px-4 mr-5 mb-2 rounded-md"
                                         placeholder="Write a location"
                                         name="location"
                                         onChange={handleChange}
                                         value={jobOffer.location}
-                                    />
+                                    /> */}
 
                                     <select
                                         name="start_date"
@@ -227,7 +227,7 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
                                         <option value="December">December</option>
 
                                     </select>
-
+                                    {/*
                                     <select
                                         name="contract"
                                         className="bg-gray-200 focus:text-black focus:outline-none w-1/7 py-3 px-4 mb-5 mr-5 rounded-md"
@@ -237,14 +237,15 @@ export default function ModalPortfolio({ show, onClose, data, skills}) {
                                         <option value="" disabled selected hidden>Contract</option>
                                         <option value="FULL_TIME">Full Time</option>
                                         <option value="PART_TIME">Part TIme</option>
-                                    </select>    
+                                    </select>  
+                                        */}  
                                 </div>
 
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t-2 border-solid border-slate-200 rounded-b">
                                     <button
                                         className="bg-blue-500 hover:bg-blue-600 outline-none focus:outline-none mr-4 mb-1 ease-linear transition-all duration-150 px-5 py-2 disabled:opacity-30 rounded-md text-white font-bold"
-                                        disabled={!jobOffer.position || newSkills.length < 1 || !jobOffer.description || !jobOffer.location || !jobOffer.start_date || !jobOffer.contract}
+                                        disabled={!jobOffer.position || newSkills.length < 1 || !jobOffer.description || !jobOffer.start_date}
                                     >Save</button>
 
                                     <button
