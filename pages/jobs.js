@@ -181,6 +181,57 @@ function Jobs({ renderData }) {
               ) : (
                 <></>
               )}
+             <div className="bg-white rounded-xl shadow-md">
+                 <br></br>
+                 <h1 className="mx-5 text-sm sm:text-base md:text-lg lg:text-xl font-thin">What are you looking for?</h1>
+                 <div className="flex flex-wrap bg-white border-2 border-solid border-gray-500 rounded-md p-4 m-4 pb-2 mt-2 shadow-sm">
+                   {
+                     filterSkills.length > 0 && filterSkills.map((skill) => 
+                       <span
+                         key={skill}
+                         onClick={() => handleFilterSkillClick(skill)} 
+                         className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-red-100 text-blue-600 rounded-md text-sm">
+                         {skill}
+                         <span className="text-red-400"> ×</span>
+                       </span>)
+                   }
+                   {
+                     filterContracts.length > 0 && filterContracts.map((contract) => 
+                       <span
+                         key={contract} 
+                         onClick={() => handleFilterContractClick(contract)} 
+                         className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-green-100 text-green-600 rounded-md text-sm">
+                         {(contract == "PART_TIME") ? "Part Time" : "Full Time"}
+                         <span className="text-green-400"> ×</span>
+                       </span>)
+                   }
+                   {
+                     filterLocations.length > 0 && filterLocations.map((location) => 
+                       <span
+                         key={location} 
+                         onClick={() => handleFilterLocationClick(location)} 
+                         className="cursor-pointer font-semibold px-3 mr-2 mb-2 bg-blue-100 text-blue-600 rounded-md text-sm">
+                         {location}
+                         <span className="text-blue-400"> ×</span>
+                       </span>)
+                   }
+                   <button onClick={clearFilters} className="font-bold text-gray-600 ml-auto bg-gray-100 px-3 mb-2 rounded-md text-sm hover:bg-gray-200">Clear</button>
+                 </div>
+                 <div className="px-2 mx-2 mt-0">
+                   <details className="group mb-4 rounded-md bg-white border-b-2 border-gray-500">
+                     <summary className="relative flex cursor-pointer flex-wrap items-center rounded group-open:z-[1] group-open:rounded-b-none">
+                       <h3 className="flex flex-1 p-4 pr-0 text-sm sm:text-base md:text-lg lg:text-xl font-thin">Skills</h3>
+                       <div className="flex w-auto items-center justify-center">
+                         <div className="ml-2 origin-left transition-transform group-open:rotate-90 mt-2 mr-3 text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl"><BsFillCaretRightFill/></div>
+                       </div>
+                     </summary>
+                     <div className="flex flex-wrap p-1 m-1 mt-0 text-sm">
+                       <SearchBar placeholder="Enter a Skill Name..." data={skills} handleSkillClick={handleSkillClick}/>
+                     </div>
+                   </details>
+                 </div>
+               <br></br>
+             </div>
           </div>
 
           <div className="w-2/3">
