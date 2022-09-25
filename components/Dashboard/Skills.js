@@ -49,7 +49,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
 
     return (
       <>
-        <div className="h-full w-7/12 flex flex-col rounded-xl shadow-md bg-white">
+        <div className="h-[18rem] md:h-[24rem] lg:h-[30rem] w-full lg:w-1/3 flex flex-col rounded-xl shadow-md bg-white">
           <div className="h-[2.25rem] md:h-[3rem] w-full px-2 md:px-4 flex items-center justify-between border-b-2 border-solid border-gray-200">
             <h2 className='font-semibold text-xs md:text-base leading-tight'>Skills</h2>
             <div className="flex flex-row items-center">
@@ -62,7 +62,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
             </div>
           </div>
           <div className='w-full px-4 md:px-6 grow flex flex-col items-center justify-center'>
-            {userSkills.length > 0 ? userSkills.slice(0,5).map((dashboard_skill) => (
+            {userSkills.length > 0 ? userSkills.slice(0,9).map((dashboard_skill) => (
               <div key={dashboard_skill.dashboard_skill_id} className="flex flex-row w-full bg-gray-100 rounded-full shadow-md px-3 my-[0.2rem] md:my-[0.3rem] h-5 md:h-7 lg:h-8 justify-between items-center">
                 <h3 className='truncate text-xs md:text-sm font-bold w-4/12'>{dashboard_skill.skill.name}</h3>
                 <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-clueless-blue rounded-full h-2 overflow-hidden"/>
@@ -187,7 +187,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
   } else {
     return (
       <>
-        <div className="h-full w-7/12 flex flex-col rounded-xl shadow-md bg-white">
+        <div className="h-[18rem] md:h-[24rem] lg:h-[30rem] w-full lg:w-1/3 flex flex-col rounded-xl shadow-md bg-white">
           <div className="h-[2.25rem] md:h-[3rem] w-full px-2 md:px-4 flex items-center justify-between border-b-2 border-solid border-gray-200">
             <h2 className='font-semibold text-xs md:text-base leading-tight'>Skills</h2>
             <div className="flex flex-row items-center">
@@ -197,7 +197,7 @@ function Skills({userId, viewingUserId, dashboardId, userSkills, skills, onRefre
             </div>
           </div>
           <div className='w-full px-4 md:px-6 grow flex flex-col items-center justify-center'>
-            {userSkills.length > 0 ? userSkills.slice(0,5).map((dashboard_skill) => (
+            {userSkills.length > 0 ? userSkills.slice(0,9).map((dashboard_skill) => (
               <div key={dashboard_skill.dashboard_skill_id}  className="flex flex-row w-full bg-gray-100 rounded-full shadow-md px-3 my-[0.2rem] md:my-[0.3rem] h-5 md:h-7 lg:h-8 justify-between items-center">
                 <h3 className='truncate text-xs md:text-sm font-bold w-4/12'>{dashboard_skill.skill.name}</h3>
                 <input type="range" min="0" max="5" value={dashboard_skill.level} readOnly className="w-8/12 accent-clueless-blue rounded-full h-2 overflow-hidden"/>

@@ -33,22 +33,17 @@ function Profile({ query, renderData }) {
     if (session && session.user.id == dashboardUser) { // This is editable returned page
       return (
         <Layout sessionData={sessionDataToLayout} viewingUser={{id: renderData.dashboardData.id, name: renderData.dashboardData.name, image: renderData.dashboardData.image}}>
-            <div className="w-full grid grid-rows-4 grid-cols-1 lg:grid-rows-2 lg:grid-cols-2 gap-[2rem]">
-                {/* About Division */}
-                <About userId={session.user.id} viewingUserId={dashboardUser} image={renderData.dashboardData.image} name={renderData.dashboardData.name} occupation={renderData.dashboardData.occupation} 
-                bio={renderData.dashboardData.dashboard.bio} onRefresh={() => router.reload()}/>
-                {/* Skills Division */}
-                <Skills userId={session.user.id} viewingUserId={dashboardUser} dashboardId={renderData.dashboardData.dashboard.dashboard_id} userSkills={renderData.dashboardData.dashboard.dashboard_skills} skills={renderData.skillsData} onRefresh={() => refreshData()}/>
-                <div className='h-[12rem] md:h-[15rem] lg:h-[18rem] w-full grid grid-rows-2 gap-[1rem]'>
-                  <div className='h-full w-full flex flex-row gap-[1rem]'>
-                    {/* Availability Division */}
-                    <Availability userId={session.user.id} viewingUserId={dashboardUser} availability={renderData.dashboardData.dashboard.availability} onRefresh={() => refreshData()}/>
-                    {/* Last Project Division */}
-                    <LastProject userId={session.user.id} viewingUserId={dashboardUser} project={renderData.dashboardData.experiences[0]}/>
-                  </div>
+            <div className="w-full grid grid-cols-1 lg:flex lg:flex-row gap-[1rem]">
+              <div className='h-[18rem] md:h-[24rem] lg:h-[30rem] w-full lg:w-2/3 flex flex-col gap-[1rem]'>
+                <About userId={session.user.id} viewingUserId={dashboardUser} image={renderData.dashboardData.image} name={renderData.dashboardData.name} occupation={renderData.dashboardData.occupation} bio={renderData.dashboardData.dashboard.bio} onRefresh={() => router.reload()}/>
+                <div className='h-1/3 w-full flex flex-row gap-[1rem]'>
+                  <Availability userId={session.user.id} viewingUserId={dashboardUser} availability={renderData.dashboardData.dashboard.availability} onRefresh={() => refreshData()}/>
+                  <LastProject userId={session.user.id} viewingUserId={dashboardUser} project={renderData.dashboardData.experiences[0]}/>
                 </div>
+              </div>
+              <Skills userId={session.user.id} viewingUserId={dashboardUser} dashboardId={renderData.dashboardData.dashboard.dashboard_id} userSkills={renderData.dashboardData.dashboard.dashboard_skills} skills={renderData.skillsData} onRefresh={() => refreshData()}/>
             </div>
-        </Layout>  
+        </Layout>
       )
     }
 

@@ -7,7 +7,7 @@ const Layout = ({ children, sessionData, viewingUser }) => {
     return (
         <>
             <Head>
-                <title>CluelessManagement</title>
+                <title>Clueless Management</title>
             </Head>
             
             <main className="h-screen w-full flex flex-col bg-white sticky top-0 z-50">

@@ -101,7 +101,7 @@ function About({userId, viewingUserId, image, name, occupation, bio, onRefresh})
 
         return (
             <>
-                <div className='h-[12rem] md:h-[15rem] lg:h-[18rem] w-full flex flex-col rounded-xl bg-white shadow-md'>
+                <div className='h-2/3 w-full flex flex-col rounded-xl bg-white shadow-md'>
                     <div className="h-[2.25rem] md:h-[3rem] w-full px-2 md:px-4 flex items-center justify-between border-b-2 border-solid border-gray-200">
                         <h2 className="font-semibold text-xs md:text-base leading-tight">About</h2>
                         <button className='w-4 md:w-6 h-4 md:h-6 p-[0.15rem] md:p-[0.2rem] text-black rounded-md hover:bg-gray-200' onClick={() => setShowModal(true)} data-bs-target='#modalRedes'>
@@ -109,7 +109,7 @@ function About({userId, viewingUserId, image, name, occupation, bio, onRefresh})
                         </button>
                     </div>
                     <div className="w-full px-4 md:px-6 grow flex flex-row items-center justify-center">
-                        <div className="h-auto w-3/12 mr-1 sm:mr-2 md:mr-3 lg:mr-4 p-[0.1rem] md:p-[0.15rem] flex items-center rounded-full border-[4px] md:border-[6px] border-gray-200">
+                        <div className="h-auto w-3/12 mr-2 sm:mr-4 md:mr-5 lg:mr-6 p-[0.1rem] md:p-[0.15rem] flex items-center rounded-full border-[4px] md:border-[6px] border-gray-200">
                             {image ? (
                                 <img className="rounded-full" src={image} width="100%" height="100%" alt="Profile picture"/>
                             ) : (
@@ -261,12 +261,12 @@ function About({userId, viewingUserId, image, name, occupation, bio, onRefresh})
         )
     } else {
         return(
-            <div className='h-[12rem] md:h-[15rem] lg:h-[18rem] w-full flex flex-col rounded-xl bg-white shadow-md'>
+            <div className='h-2/3 w-full flex flex-col rounded-xl bg-white shadow-md'>
                 <div className="h-[2.25rem] md:h-[3rem] w-full px-2 md:px-4 flex items-center justify-between border-b-2 border-solid border-gray-200">
                     <h2 className="font-semibold text-xs md:text-base leading-tight">About</h2>
                 </div>
                 <div className="w-full px-4 md:px-6 grow flex flex-row items-center justify-center">
-                    <div className="h-auto w-3/12 mr-1 sm:mr-2 md:mr-3 lg:mr-4 p-[0.1rem] md:p-[0.15rem] flex items-center rounded-full border-[4px] md:border-[6px] border-gray-200">
+                    <div className="h-auto w-3/12 mr-2 sm:mr-4 md:mr-5 lg:mr-6 p-[0.1rem] md:p-[0.15rem] flex items-center rounded-full border-[4px] md:border-[6px] border-gray-200">
                         {image ? (
                             <img className="rounded-full" src={image} width="100%" height="100%" alt="Profile picture"/>
                         ) : (

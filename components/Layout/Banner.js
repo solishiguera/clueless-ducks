@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ProfilePic from './ProfilePic'
+import cluelessLogo from "/public/images/cluelessManagement.png"
 import DropDownMenu from "./DropDownMenu.js"
 import {RiLoginBoxLine} from "react-icons/ri";
 import {RiSearchLine} from "react-icons/ri";
@@ -14,7 +15,9 @@ function Banner({ sessionData }) {
             <div className='w-24 sm:w-32 lg:w-36 ml-4 sm:ml-5 lg:ml-6 mt-4 sm:mt-6 lg:mt-8 self-center'>
                 <Link href="/">
                     <a>
-                        
+                        <Image className='hover:cursor-pointer'
+                                src={cluelessLogo}
+                        />
                     </a>
                 </Link>
             </div>
