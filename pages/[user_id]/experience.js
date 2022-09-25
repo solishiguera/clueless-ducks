@@ -6,15 +6,15 @@ import{IoMdBriefcase} from "react-icons/io";
 import {AiOutlinePlus, AiFillRocket} from "react-icons/ai";
 import {FaGraduationCap} from "react-icons/fa";
 import Layout from "../../components/Layout/Layout";
-import ModalPortfolio from "../../components/Portfolio/ModalPortfolio";
+import ModalExperience from "../../components/Experience/ModalExperience";
 import ErrorContainer from "../../components/Templates/ErrorContainer";
 import { getExperiences, deleteExperience } from "../../lib/fetching/experiences"
 
-// This page creates the portfolio of each user.
+// This page creates the portfolio of experiences of each user.
 
-function Portfolio({ query, renderData }) {
+function Experience({ query, renderData }) {
   const { data: session, status } = useSession();
-  const portfolioUser = query.user_id;
+  const ExperienceUser = query.user_id;
   let sessionDataToLayout = null;
   const router = useRouter();
 
@@ -38,14 +38,14 @@ function Portfolio({ query, renderData }) {
     }
   }
   
-  if (session && session.user.id == portfolioUser) {
+  if (session && session.user.id == ExperienceUser) {
     const [showModal, setShowModal] = useState(false);
     const [data, setData] = useState(null);
 
     // This is editable returned page
     return (
       <Layout sessionData={sessionDataToLayout} viewingUser={{id: renderData.id, name: renderData.name, image: renderData.image}}>
-        <ModalPortfolio show={showModal} onClose={() => setShowModal(false)} onSave={() => refreshData()} data={data} user_id={session.user.id}/>
+        <ModalExperience show={showModal} onClose={() => setShowModal(false)} onSave={() => refreshData()} data={data} user_id={session.user.id}/>
 
         <div className="bg-white rounded-xl w-full mb-5 text-center shadow-md">
           <button className="bg-clueless-blue hover:bg-blue-600 px-5 py-2 font-bold rounded-xl inline-flex items-center text-white w-full text-center" onClick={() => {setData(null), setShowModal(true)}}>
@@ -279,7 +279,7 @@ function Portfolio({ query, renderData }) {
   } else {
     return (
       <Layout sessionData={sessionDataToLayout}>
-          <ErrorContainer code={404} message={"Portfolio not found."}/>
+          <ErrorContainer code={404} message={"Experiences not found."}/>
       </Layout>
     )
   }
@@ -326,4 +326,4 @@ export const getServerSideProps = async (context) => {
   }
 };
 
-export default Portfolio
+export default Experience

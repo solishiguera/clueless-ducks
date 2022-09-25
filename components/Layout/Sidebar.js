@@ -43,17 +43,17 @@ function Sidebar({ sessionData, user }) {
               <a><SidebarRow Icon = {UserIcon} title="Profile" status="active"/></a>
             </Link>
             
-            <Link href={"/" + user.id + "/portfolio"}>
+            <Link href={"/" + user.id + "/experience"}>
               <a><SidebarRow Icon = {BriefcaseIcon} title="Experience" status="active"/></a>
             </Link>
           </div>
 
-          <Link href="/jobs">
+          <Link href="/tasks">
             <a><SidebarRow Icon = {NewspaperIcon} title="Tasks" status="active"/> </a>
           </Link>
 
           {sessionData && (sessionData.role == "ADMIN" || sessionData.role == "MASTER") ? (
-            <Link href="/jobs/admin">
+            <Link href="/tasks/admin">
               <a><SidebarRow Icon = {ViewGridAddIcon} title="A-Tasks" status="active"/> </a>
             </Link>
           ) : (
@@ -76,8 +76,8 @@ function Sidebar({ sessionData, user }) {
     <>
       <ToastContainer/>
       <div className="w-auto h-full flex flex-col p-2 sm:p-3 lg:p-4 pt-4 sm:pt-5 lg:pt-6 font-semibold sticky top-0">
-        <Link href="/jobs">
-          <a><SidebarRow Icon = {NewspaperIcon} title="Jobs" status="active"/> </a>
+        <Link href="/tasks">
+          <a><SidebarRow Icon = {NewspaperIcon} title="Tasks" status="active"/> </a>
         </Link>
 
         <div className="flex flex-col pt-2 border-t-2 border-solid border-gray-200">
@@ -87,7 +87,7 @@ function Sidebar({ sessionData, user }) {
           </button>
 
           <button onClick={() =>  infoSignIn()}>
-            <SidebarRow Icon = {BriefcaseIcon} title="Portfolio" status="disabled"/>
+            <SidebarRow Icon = {BriefcaseIcon} title="Experience" status="disabled"/>
           </button>
         </div>
       </div>

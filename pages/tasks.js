@@ -110,7 +110,6 @@ function Jobs({ renderData }) {
     setFilterContracts([]);
     setFilterLocations([]);
   }
-
   const filteredJobsbySkills = jobs.filter(filterBySkills);
   const filteredJobsbySkillsContracts = filteredJobsbySkills.filter(filterByContracts);
   const filteredJobsbySkillsContractsLocation = filteredJobsbySkillsContracts.filter(filterByLocation);
